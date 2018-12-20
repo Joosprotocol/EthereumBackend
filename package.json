@@ -1,0 +1,25 @@
+{
+  "name": "ethereum_backend",
+  "version": "1.0.0",
+  "description": "## Installation",
+  "main": "ethereum_backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/itmaster/ethereum-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/itmaster/ethereum-backend#readme",
+  "dependencies": {
+    "ethereumjs-tx": "^1.3.7",
+    "express": "^4.16.4",
+    "web3": "^1.0.0-beta.37",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
