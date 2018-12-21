@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.post('/', async (req, res) => {
 
-    logger.log({input: req.body, time: Date()});
+    logger.info({time: Date(), input: req.body});
 
     let response;
     let output;
@@ -54,7 +54,7 @@ app.post('/', async (req, res) => {
         };
 
         res.send(output);
-        logger.log({output: output, time: Date()});
+        logger.info({time: Date(), output: output});
     } catch (err) {
 
         output = {
@@ -66,7 +66,7 @@ app.post('/', async (req, res) => {
         };
 
         res.send(output)
-        logger.error({output: output, time: Date()});
+        logger.error({time: Date(), output: output});
     }
 
 
