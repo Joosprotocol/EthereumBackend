@@ -1,4 +1,4 @@
 /node_modules
 /.idea
 combined.log
-config.js
+config-local.js

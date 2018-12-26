@@ -2,7 +2,7 @@
 
 ## Setup
 
-Set params in config.js
+Set params in config-local.js
 
 Example:
 

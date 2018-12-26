@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const winston = require("winston");
 
 const app = express();
-const config = require('./config');
+const config = require('./config-local');
 
 //Infura HttpProvider Endpoint
 web3js = new web3(new web3.providers.HttpProvider("https://rinkeby.infura.io/v3/" + config.infura_key));
@@ -29,7 +29,7 @@ const logger = winston.createLogger({
     ]
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(3000, () => console.log('Ethereum backend listening on port 3000!'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.post('/', async (req, res) => {
