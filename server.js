@@ -116,8 +116,7 @@ function isContractDefine(contract_name) {
 }
 
 function callContract(contract_name, method, params) {
-
-    if (isContractDefine(contract_name)) {
+    if (!isContractDefine(contract_name)) {
         throw new UserException("Missing or invalid parameter 'contract_name'.");
     }
 
@@ -130,7 +129,7 @@ function callContract(contract_name, method, params) {
 };
 
 async function sendContract (contract_name, method, params) {
-    if (isContractDefine(contract_name)) {
+    if (!isContractDefine(contract_name)) {
         throw new UserException("Missing or invalid parameter 'contract_name'.");
     }
 
